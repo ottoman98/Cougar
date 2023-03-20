@@ -1,0 +1,11 @@
+@import url("../../variables.css");
+
+.carousel {
+  margin: 20px 0;
+}
+.c-item {
+  padding: 10px;
+}
+.c-item img {
+  width: 100%;
+}

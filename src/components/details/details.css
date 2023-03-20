@@ -1,0 +1,15 @@
+.main-details {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+.main-details-item {
+  margin: 30px;
+}
+@media screen and (max-width: 900px) {
+  .details-text {
+    align-items: center;
+    width: 25rem;
+  }
+}

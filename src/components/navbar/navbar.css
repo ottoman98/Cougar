@@ -1,0 +1,58 @@
+@import url(../../variables.css);
+
+#k {
+  padding: 0 !important;
+}
+
+#left-navbar {
+  display: flex;
+}
+#logo {
+  height: 1em;
+}
+#name-navbar {
+  display: block;
+}
+#name-navbar,
+#logo {
+  margin: 10px;
+}
+
+.dropdown-btn {
+  background-color: red;
+  margin: 30px;
+}
+
+.tra {
+  margin: 0 !important;
+  height: 3.1rem;
+}
+
+.drop-link:hover {
+  border-bottom: 1px black solid;
+  transition: 1s;
+}
+
+.drop-menu {
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu-list li {
+  margin: 10px;
+}
+
+.menu-list li a {
+  color: var(--font-color);
+}
+.menu-list li:hover {
+  border-bottom: 1px black solid;
+}
+
+.menu-list {
+  list-style: none;
+}
