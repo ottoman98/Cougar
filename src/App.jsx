@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter, Route, Routes, HashRouter } from "react-router-dom";
 
 
 //components
@@ -32,7 +32,8 @@ function App() {
   return (
     <>
       <>
-        <BrowserRouter>
+        <BrowserRouter >
+
           <NavBarMain />
           <div className='body'>
 
@@ -47,14 +48,14 @@ function App() {
 
               </>} />
 
-              <Route path="/category" element={
+              <Route path="/category/:categoria" element={
                 <>
 
                   <Cards categoria='Conjuntos dri fit' />
 
                 </>} />
 
-              <Route exact path="category/product/:id" element={
+              <Route path="category/:category/product/:id" element={
                 <>
 
                   <Details />
@@ -77,9 +78,10 @@ function App() {
 
 
           <Footer />
+
+
+
         </BrowserRouter>
-
-
       </>
 
 

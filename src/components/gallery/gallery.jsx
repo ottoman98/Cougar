@@ -52,6 +52,7 @@ function Gallery({ imgs }) {
                         src={imageSources[selectedIndex]}
                         alt=""
                     />
+
                     <div className='arrows-container' ref={collection}>
                         <img src={arrow} className='arrow-left' alt="" onClick={increase} />
                         <img src={arrow} className='arrow-right' alt="" onClick={decrease} />

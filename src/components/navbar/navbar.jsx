@@ -1,15 +1,35 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Link } from 'react-router-dom';
+import useFetch from '../../hooks/useFetch';
 
 
 import logo from '../../img/logo.png';
 import './navbar.css';
 
 function NavBarMain() {
+    const url = 'http://localhost:3000/product';
+
+    const data = useFetch(url).data;
+
+    const [categories, setCategories] = useState([]);
+
+    if (data) {
+        data.map((x) => {
+
+            categories.push(x.categoria);
+            console.log(x.categoria);
+
+        });
+    }
+
+
+
+
+
     const dropDownRefMen = useRef(null);
     const dropDownRefWomen = useRef(null);
 
@@ -106,30 +126,21 @@ function NavBarMain() {
                 onMouseOut={handleMenuMouseOut}
             >
                 <ul className="menu-list" onMouseOver={handleMenuMouseOver}>
-                    <li><Link to="/tshirts">T-shirts</Link></li>
-                    <li><Link to="/hoodies">Hoodies</Link></li>
-                    <li><Link to="/sweaters">Sweaters</Link></li>
-                    <li><Link to="/jackets">Jackets</Link></li>
-                    <li><Link to="/jeans">Jeans</Link></li>
-                    <li><Link to="/pants">Pants</Link></li>
+                    <li><Link to="category/tshirts">T-shirts</Link></li>
+                    <li><Link to="category/hoodies">Hoodies</Link></li>
+
                 </ul>
 
                 <ul className="menu-list" onMouseOver={handleMenuMouseOver}>
-                    <li><Link to="/dresses">Dresses</Link></li>
-                    <li><Link to="/skirts">Skirts</Link></li>
-                    <li><Link to="/tops">Tops</Link></li>
-                    <li><Link to="/blouses">Blouses</Link></li>
-                    <li><Link to="/pants">Pants</Link></li>
-                    <li><Link to="/jeans">Jeans</Link></li>
+                    <li><Link to="category/dresses">Dresses</Link></li>
+                    <li><Link to="category/skirts">Skirts</Link></li>
+
                 </ul>
 
                 <ul className="menu-list" onMouseOver={handleMenuMouseOver}>
-                    <li><Link to="/suits">Suits</Link></li>
-                    <li><Link to="/dress-shirts">Dress shirts</Link></li>
-                    <li><Link to="/ties">Ties</Link></li>
-                    <li><Link to="/dress-pants">Dress pants</Link></li>
-                    <li><Link to="/jackets">Jackets</Link></li>
-                    <li><Link to="/blazers">Blazers</Link></li>
+                    <li><Link to="category/suits">Suits</Link></li>
+                    <li><Link to="category/dress-shirts">Dress shirts</Link></li>
+
                 </ul>
             </div>
             <div
