@@ -47,10 +47,10 @@
 }
 
 .menu-list li a {
-  color: var(--font-color);
+  color: var(--font-color-secondary);
 }
-.menu-list li:hover {
-  border-bottom: 1px black solid;
+.menu-list li a:hover {
+  color: var(--font-color);
 }
 
 .menu-list {

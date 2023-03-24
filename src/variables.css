@@ -1,5 +1,5 @@
 :root {
   --font: blue;
   --font-color: black;
-  --font-color-secondary: gray;
+  --font-color-secondary: rgba(15, 12, 14, 0.6);
 }

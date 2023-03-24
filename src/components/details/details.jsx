@@ -1,27 +1,67 @@
+import React from "react";
+import { useParams } from "react-router-dom";
+import useFetch from "../../hooks/useFetch";
 import Carosuel from "../carousel/corousel";
 import Gallery from "../gallery/gallery";
 import './details.css';
 
 function Details() {
+    const { id } = useParams();
+
+    const url = 'http://localhost:3000/product';
+    const fetch = useFetch(url).data;
+
+    let data;
+
+    if (fetch) {
+        data = fetch.find((x) => x._id === id);
+
+    }
+
+
+
+
     return (<>
-        <div className="main-details">
-            <Gallery className="main-details-item" />
-            <div className="main-details-item details-text">
-                <h2>Nike Dri-FIT Get Fit</h2>
-                <i>30,000 $</i><br />
+        {fetch ?
+            <>
+                <div className="main-details">
 
-                <i>Tallas</i>
-                <p>Colores</p>
-                <ul>
-                    <li>Rapé</li>
-                    <li>Kaki</li>
-                    <li>Mostaza</li>
-                    <li>Mango biche</li>
-                </ul>
-            </div>
+                    <Gallery imgs={data.imgUrls} className="main-details-item" />
+                    <div className="main-details-item details-text">
+                        <h2>{data.nombre.charAt(0).toUpperCase() + data.nombre.slice(1)}</h2>
+                        <i>{data.precio} $</i><br />
+
+                        <i>Tallas</i>
+                        <div id="tallas">
+
+                            {data.tallas.map((x) => {
+                                return (
+                                    <React.Fragment key={x}>
+                                        <div>{x}</div>
+
+                                    </React.Fragment>);
+                            })}
+                        </div>
+
+                        <p>Colores</p>
+                        <div id="colores">
+
+                            {data.colores.map((x) => {
+                                return (
+                                    <React.Fragment key={x}>
+                                        <div>{x}</div>
+
+                                    </React.Fragment>);
+                            })}
+                        </div>
+
+                    </div>
 
 
-        </div>
+                </div>
+            </>
+            : null}
+
         <Carosuel titulo="Completa  tu look" />
 
 

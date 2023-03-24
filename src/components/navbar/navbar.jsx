@@ -10,19 +10,37 @@ import logo from '../../img/logo.png';
 import './navbar.css';
 
 function NavBarMain() {
-    const dropDownRef = useRef(null);
-    const timeoutRef = useRef(null);
+    const dropDownRefMen = useRef(null);
+    const dropDownRefWomen = useRef(null);
 
-    const handleMenuMouseOver = () => {
-        dropDownRef.current.removeAttribute('hidden');
-        clearTimeout(timeoutRef.current);
-    };
 
     const handleMenuMouseOut = () => {
-        timeoutRef.current = setTimeout(() => {
-            dropDownRef.current.setAttribute('hidden', true);
-        }, 0);
+        dropDownRefMen.current.setAttribute('hidden', true);
+
     };
+
+
+    const handleMenuMouseOutWomen = () => {
+        dropDownRefWomen.current.setAttribute('hidden', true);
+
+
+    };
+
+    const handleMenuMouseOver = () => {
+        dropDownRefMen.current.removeAttribute('hidden');
+        handleMenuMouseOutWomen();
+
+    };
+
+    const handleMenuMouseOverWomen = () => {
+        dropDownRefWomen.current.removeAttribute('hidden');
+        handleMenuMouseOut();
+
+
+
+    };
+
+
 
 
 
@@ -69,7 +87,11 @@ function NavBarMain() {
                                 >
                                     Hombre
                                 </Nav.Link>
-                                <Nav.Link className="drop-link" onMouseOver={handleMenuMouseOut}>Mujer</Nav.Link>
+
+                                <Nav.Link
+                                    className="drop-link"
+                                    onMouseOver={handleMenuMouseOverWomen}
+                                >Mujer</Nav.Link>
                             </Nav>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>
@@ -79,7 +101,7 @@ function NavBarMain() {
             <div
                 className="drop-menu"
                 hidden
-                ref={dropDownRef}
+                ref={dropDownRefMen}
                 onMouseOver={handleMenuMouseOver}
                 onMouseOut={handleMenuMouseOut}
             >
@@ -93,6 +115,40 @@ function NavBarMain() {
                 </ul>
 
                 <ul className="menu-list" onMouseOver={handleMenuMouseOver}>
+                    <li><Link to="/dresses">Dresses</Link></li>
+                    <li><Link to="/skirts">Skirts</Link></li>
+                    <li><Link to="/tops">Tops</Link></li>
+                    <li><Link to="/blouses">Blouses</Link></li>
+                    <li><Link to="/pants">Pants</Link></li>
+                    <li><Link to="/jeans">Jeans</Link></li>
+                </ul>
+
+                <ul className="menu-list" onMouseOver={handleMenuMouseOver}>
+                    <li><Link to="/suits">Suits</Link></li>
+                    <li><Link to="/dress-shirts">Dress shirts</Link></li>
+                    <li><Link to="/ties">Ties</Link></li>
+                    <li><Link to="/dress-pants">Dress pants</Link></li>
+                    <li><Link to="/jackets">Jackets</Link></li>
+                    <li><Link to="/blazers">Blazers</Link></li>
+                </ul>
+            </div>
+            <div
+                className="drop-menu"
+                hidden
+                ref={dropDownRefWomen}
+                onMouseOver={handleMenuMouseOverWomen}
+                onMouseOut={handleMenuMouseOutWomen}
+            >
+                <ul className="menu-list" onMouseOver={() => { handleMenuMouseOverWomen; }} >
+                    <li><Link to="/tshirts">asd</Link></li>
+                    <li><Link to="/hoodies">Hoodies</Link></li>
+                    <li><Link to="/sweaters">Sweaters</Link></li>
+                    <li><Link to="/jackets">Jackets</Link></li>
+                    <li><Link to="/jeans">Jeans</Link></li>
+                    <li><Link to="/pants">Pants</Link></li>
+                </ul>
+
+                <ul className="menu-list" onMouseOver={handleMenuMouseOverWomen}>
                     <li><Link to="/dresses">Dresses</Link></li>
                     <li><Link to="/skirts">Skirts</Link></li>
                     <li><Link to="/tops">Tops</Link></li>
