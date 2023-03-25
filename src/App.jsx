@@ -32,7 +32,7 @@ function App() {
   return (
     <>
       <>
-        <BrowserRouter >
+        <HashRouter >
 
           <NavBarMain />
           <div className='body'>
@@ -81,7 +81,7 @@ function App() {
 
 
 
-        </BrowserRouter>
+        </HashRouter>
       </>
 
 
