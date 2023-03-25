@@ -24,7 +24,7 @@ function NavBarMain() {
     setInterval(() => {
         fetch(url)
             .then((response) => response.json())
-            .then((data) => console.log(data))
+            .then((data) => console.log('sucess'))
             .catch((error) => console.error(error));
     }, 600000); // 10 minutos en milisegundos
 
