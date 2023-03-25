@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -12,10 +12,35 @@ import './navbar.css';
 
 function NavBarMain() {
     const url = 'https://sport-elite-back.onrender.com/product';
+    const [test, setTest] = useState();
 
     const data = useFetch(url).data;
-
     const [categories, setCategories] = useState([]);
+
+
+
+
+
+    setInterval(() => {
+        fetch(url)
+            .then((response) => response.json())
+            .then((data) => console.log(data))
+            .catch((error) => console.error(error));
+    }, 600000); // 10 minutos en milisegundos
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     if (data) {
         data.map((x) => {
