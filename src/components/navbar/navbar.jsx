@@ -11,7 +11,7 @@ import logo from '../../img/logo.png';
 import './navbar.css';
 
 function NavBarMain() {
-    const url = 'http://localhost:3000/product';
+    const url = 'https://sport-elite-back.onrender.com/product';
 
     const data = useFetch(url).data;
 
@@ -21,7 +21,7 @@ function NavBarMain() {
         data.map((x) => {
 
             categories.push(x.categoria);
-            console.log(x.categoria);
+
 
         });
     }

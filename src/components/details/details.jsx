@@ -8,7 +8,7 @@ import './details.css';
 function Details() {
     const { id } = useParams();
 
-    const url = 'http://localhost:3000/product';
+    const url = 'https://sport-elite-back.onrender.com/product';
     const fetch = useFetch(url).data;
 
     let data;

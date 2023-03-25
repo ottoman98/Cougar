@@ -5,7 +5,7 @@ import React from 'react';
 
 
 function Cards(props) {
-    const url = 'http://localhost:3000/product';
+    const url = 'https://sport-elite-back.onrender.com/product';
 
     const data = useFetch(url).data;
 

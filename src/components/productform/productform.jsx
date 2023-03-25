@@ -2,7 +2,7 @@ import { useState } from 'react';
 import useFetch from '../../hooks/useFetch';
 
 function ProductForm() {
-    const url = 'http://localhost:3000/product';
+    const url = 'https://sport-elite-back.onrender.com/product';
 
     const { setNombre, setCantidad, setPrecio, setCategoria, setColores, setTallas, setDescuento, handleImagenesChange, handleSubmit } = useFetch(url, 'POST');
 
@@ -10,32 +10,32 @@ function ProductForm() {
         <form onSubmit={handleSubmit} encType="multipart/form-data">
             <label>
                 Nombre:
-                <input type="text" onChange={event => setNombre(event.target.value)} />
+                <input type="text" required onChange={event => setNombre(event.target.value)} />
             </label>
             <br />
             <label>
                 Cantidad:
-                <input type="number" onChange={event => setCantidad(parseInt(event.target.value))} />
+                <input type="number" required onChange={event => setCantidad(parseInt(event.target.value))} />
             </label>
             <br />
             <label>
                 Precio:
-                <input type="number" onChange={event => setPrecio(parseInt(event.target.value))} />
+                <input type="number" required onChange={event => setPrecio(parseInt(event.target.value))} />
             </label>
             <br />
             <label>
                 Categoría:
-                <input type="text" onChange={event => setCategoria(event.target.value)} />
+                <input type="text" required onChange={event => setCategoria(event.target.value)} />
             </label>
             <br />
             <label>
                 Colores:
-                <input type="text" onChange={event => setColores(event.target.value.split(','))} />
+                <input type="text" required onChange={event => setColores(event.target.value.split(','))} />
             </label>
             <br />
             <label>
                 Tallas:
-                <input type="text" onChange={event => setTallas(event.target.value.split(','))} />
+                <input type="text" required onChange={event => setTallas(event.target.value.split(','))} />
             </label>
             <br />
             <label>
@@ -45,7 +45,7 @@ function ProductForm() {
             <br />
             <label>
                 Imágenes:
-                <input type="file" multiple onChange={handleImagenesChange} />
+                <input type="file" accept=".png, .jpg, .gif, .bmp" required multiple onChange={handleImagenesChange} />
             </label>
             <br />
             <button type="submit">Guardar</button>
