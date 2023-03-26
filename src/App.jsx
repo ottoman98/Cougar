@@ -11,6 +11,10 @@ import Carosuel from "./components/carousel/corousel";
 import Footer from "./components/footer/footer";
 import Details from "./components/details/details";
 import TextBar from "./components/textbar/textbar";
+import ProductForm from "./components/productform/productform";
+import StaticCarosuel from "./components/staticcarousel/staticcorousel";
+
+
 
 //styles
 import './app.css';
@@ -19,8 +23,6 @@ import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
-import ProductForm from "./components/productform/productform";
-import StaticCarosuel from "./components/staticcarousel/staticcorousel";
 
 
 
@@ -73,8 +75,6 @@ function App() {
                   <ProductForm />
 
                 </>} />
-
-
 
             </Routes>
           </div>

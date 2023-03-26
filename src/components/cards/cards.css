@@ -1,9 +1,13 @@
 @import url(../../variables.css);
 
+.cards-main {
+  max-width: 90rem;
+}
 .cards {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  border-top: black 3px solid;
 }
 
 .card-item {

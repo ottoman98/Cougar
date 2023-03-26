@@ -1,0 +1,46 @@
+.card-item {
+  width: 20rem;
+  color: black;
+  position: relative;
+}
+.card-item:hover {
+  opacity: 0.8;
+  transition: 1s;
+}
+
+.image-card {
+  aspect-ratio: 3/4;
+}
+
+@media (max-width: 900px) {
+  .card-item {
+    width: 10rem;
+  }
+}
+
+.discount {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px -50px 36px -28px inset;
+  padding: 5px;
+  position: absolute;
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+.antes-ahora {
+  display: flex;
+  justify-content: space-around;
+}
+
+.antes-card {
+  text-decoration: line-through;
+
+  text-decoration-color: red;
+}
+.ahora-card {
+  color: green;
+}
+.antes-ahora,
+.ahora-card {
+  font-weight: bold;
+  font-style: italic;
+}

@@ -11,7 +11,7 @@ function Cards(props) {
 
     return (
         <>
-            <div>
+            <div className='cards-main'>
                 <h2>{props.categoria}</h2>
 
 
