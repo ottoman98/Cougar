@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -12,13 +12,10 @@ import './navbar.css';
 
 function NavBarMain() {
     const url = 'https://sport-elite-back.onrender.com/product';
-    const [test, setTest] = useState();
+
 
     const data = useFetch(url).data;
     const [categories, setCategories] = useState([]);
-
-
-
 
 
     setInterval(() => {
@@ -28,20 +25,6 @@ function NavBarMain() {
             .catch((error) => console.error(error));
     }, 600000); // 10 minutos en milisegundos
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     if (data) {
         data.map((x) => {
 
@@ -50,9 +33,6 @@ function NavBarMain() {
 
         });
     }
-
-
-
 
 
     const dropDownRefMen = useRef(null);
@@ -68,20 +48,16 @@ function NavBarMain() {
     const handleMenuMouseOutWomen = () => {
         dropDownRefWomen.current.setAttribute('hidden', true);
 
-
     };
 
     const handleMenuMouseOver = () => {
         dropDownRefMen.current.removeAttribute('hidden');
         handleMenuMouseOutWomen();
-
     };
 
     const handleMenuMouseOverWomen = () => {
         dropDownRefWomen.current.removeAttribute('hidden');
         handleMenuMouseOut();
-
-
 
     };
 
@@ -94,7 +70,7 @@ function NavBarMain() {
         <>
 
 
-            <Navbar key={expand} bg="light" expand={expand} className="mb-3" id="k" >
+            <Navbar key={expand} bg="light" expand={expand} className="mb-3" id="main-nav" >
                 <Container fluid>
                     <Link to={'/'}>
 
@@ -105,7 +81,8 @@ function NavBarMain() {
                                 className="d-inline-block align-top "
                                 id="logo"
                             />
-                            SportElite
+                            <h2>SportElite</h2>
+
                         </Navbar.Brand>
                     </Link>
 
@@ -167,6 +144,10 @@ function NavBarMain() {
                     <li><Link to="category/dress-shirts">Dress shirts</Link></li>
 
                 </ul>
+                <div className='all-products'>
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0aa19822-f6c9-47ee-8410-cf5e8657ea08/segunda-equipacion-liverpool-fc-tech-fleece-windrunner-sudadera-con-capucha-con-cremallera-completa-ccQSJ2.png" id='img-dropdown' alt="" />
+                    <p>Todos los productos</p>
+                </div>
             </div>
             <div
                 className="drop-menu"
@@ -179,28 +160,29 @@ function NavBarMain() {
                     <li><Link to="/tshirts">asd</Link></li>
                     <li><Link to="/hoodies">Hoodies</Link></li>
                     <li><Link to="/sweaters">Sweaters</Link></li>
-                    <li><Link to="/jackets">Jackets</Link></li>
-                    <li><Link to="/jeans">Jeans</Link></li>
-                    <li><Link to="/pants">Pants</Link></li>
+
                 </ul>
 
                 <ul className="menu-list" onMouseOver={handleMenuMouseOverWomen}>
                     <li><Link to="/dresses">Dresses</Link></li>
                     <li><Link to="/skirts">Skirts</Link></li>
-                    <li><Link to="/tops">Tops</Link></li>
-                    <li><Link to="/blouses">Blouses</Link></li>
-                    <li><Link to="/pants">Pants</Link></li>
-                    <li><Link to="/jeans">Jeans</Link></li>
+
                 </ul>
 
                 <ul className="menu-list" onMouseOver={handleMenuMouseOver}>
                     <li><Link to="/suits">Suits</Link></li>
                     <li><Link to="/dress-shirts">Dress shirts</Link></li>
                     <li><Link to="/ties">Ties</Link></li>
-                    <li><Link to="/dress-pants">Dress pants</Link></li>
-                    <li><Link to="/jackets">Jackets</Link></li>
-                    <li><Link to="/blazers">Blazers</Link></li>
+
                 </ul>
+                <Link>
+
+                    <div className='all-products'>
+                        <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/7c5a1997-f5c4-409f-8b96-80b0576929d1/sportswear-everyday-modern-sudadera-con-capucha-de-tejido-fleece-h6Wqpc.png" id='img-dropdown' alt="" />
+                        <p>Todos los productos</p>
+                    </div>
+                </Link>
+
             </div>
 
 

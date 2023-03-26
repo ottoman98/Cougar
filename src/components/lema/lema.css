@@ -1,11 +1,19 @@
 #lema {
   text-align: center;
-}
+  background-image: url("../../img//exercise.jpg");
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: multiply;
+  margin-bottom: 20px;
 
-#lema p {
-  font-size: 1.5rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-#lema h1 {
-  font-size: 3rem;
+#text-lema {
+  height: 30%;
+  color: white;
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
     MDBFooter,
     MDBContainer,
@@ -10,88 +11,29 @@ import './footer.css';
 
 export default function Footer() {
     return (
-        <MDBFooter className='text-center text-white footer' style={{ backgroundColor: '#f1f1f1' }}>
+        <MDBFooter className='text-center text-white footer t' >
             <MDBContainer className='pt-4'>
                 <section className='mb-4'>
-                    <MDBBtn
-                        rippleColor="dark"
-                        color='link'
-                        floating
-                        size="lg"
-                        className='text-dark m-1'
-                        href='#!'
-                        role='button'
-                    >
-                        <MDBIcon fab className='fab fa-facebook-f' />
-                    </MDBBtn>
+                    <p>Siguenos en:</p>
 
-                    <MDBBtn
-                        rippleColor="dark"
-                        color='link'
-                        floating
-                        size="lg"
-                        className='text-dark m-1'
-                        href='#!'
-                        role='button'
-                    >
-                        <MDBIcon fab className='fa-twitter' />
-                    </MDBBtn>
 
-                    <MDBBtn
-                        rippleColor="dark"
-                        color='link'
-                        floating
-                        size="lg"
-                        className='text-dark m-1'
-                        href='#!'
-                        role='button'
-                    >
-                        <MDBIcon fab className='fa-google' />
-                    </MDBBtn>
+                    <MDBIcon fab className='fa-instagram icon' />
 
-                    <MDBBtn
-                        rippleColor="dark"
-                        color='link'
-                        floating
-                        size="lg"
-                        className='text-dark m-1'
-                        href='#!'
-                        role='button'
-                    >
-                        <MDBIcon fab className='fa-instagram' />
-                    </MDBBtn>
 
-                    <MDBBtn
-                        rippleColor="dark"
-                        color='link'
-                        floating
-                        size="lg"
-                        className='text-dark m-1'
-                        href='#!'
-                        role='button'
-                    >
-                        <MDBIcon fab className='fa-linkedin' />
-                    </MDBBtn>
+                    <Link><MDBIcon fab className='fa-github icon' /></Link>
 
-                    <MDBBtn
-                        rippleColor="dark"
-                        color='link'
-                        floating
-                        size="lg"
-                        className='text-dark m-1'
-                        href='#!'
-                        role='button'
-                    >
-                        <MDBIcon fab className='fa-github' />
-                    </MDBBtn>
+
+
+
                 </section>
             </MDBContainer>
 
-            <div className='text-center text-dark p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-                © 2020 Copyright:
-                <a className='text-dark' href='https://mdbootstrap.com/'>
-                    MDBootstrap.com
-                </a>
+            <div className='text-center text-dark p-3 lower-footer' >
+                <p>© 2023 Copyright: SportElite</p>
+                <Link><p>Developed by: ottoman98</p></Link>
+
+
+
             </div>
         </MDBFooter>
     );

@@ -1,0 +1,35 @@
+#text-container {
+  text-align: center;
+  background-color: black;
+  height: 21px;
+}
+
+#text-container p {
+  font-weight: bold;
+  position: absolute;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(
+    to right,
+    #f00,
+    #ff0,
+    #0f0,
+    #0ff,
+    #00f,
+    #f0f
+  );
+  animation: mover 10s ease-in-out infinite;
+}
+
+@keyframes mover {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 50%;
+  }
+  100% {
+    left: 0;
+  }
+}

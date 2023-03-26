@@ -1,1 +1,21 @@
+.t {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  width: 100%;
+  margin-top: auto;
+}
 
+.lower-footer {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.lower-footer p {
+  color: white;
+  text-align: center;
+  margin: 20px;
+}
+.icon {
+  color: white;
+  margin: 20px;
+}

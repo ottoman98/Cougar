@@ -3,6 +3,9 @@
 .carousel {
   margin: 20px 0;
 }
+.carousel-section {
+  border-top: 2px solid black;
+}
 .c-item {
   padding: 10px;
 }

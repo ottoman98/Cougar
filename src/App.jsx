@@ -10,6 +10,7 @@ import Lema from "./components/lema/lema";
 import Carosuel from "./components/carousel/corousel";
 import Footer from "./components/footer/footer";
 import Details from "./components/details/details";
+import TextBar from "./components/textbar/textbar";
 
 //styles
 import './app.css';
@@ -19,6 +20,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 import ProductForm from "./components/productform/productform";
+import StaticCarosuel from "./components/staticcarousel/staticcorousel";
 
 
 
@@ -29,14 +31,11 @@ import ProductForm from "./components/productform/productform";
 
 function App() {
 
-
-
-
-
   return (
     <>
       <>
         <HashRouter >
+          <TextBar />
 
           <NavBarMain />
           <div className='body'>
@@ -45,10 +44,11 @@ function App() {
 
               <Route index element={<>
 
-                <Lema />
                 <MainVideo />
+                <Lema />
                 <Carosuel titulo="Destacado" />
                 <Carosuel titulo="Mas vendidos" />
+                <StaticCarosuel titulo='Categorias' />
 
               </>} />
 

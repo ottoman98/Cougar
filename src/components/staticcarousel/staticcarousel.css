@@ -1,0 +1,23 @@
+@import url("../../variables.css");
+
+.carousel-static {
+  margin: 20px 0;
+}
+.carousel-section-static {
+  border-top: 2px solid black;
+  margin: 30px 0;
+}
+.c-item-static {
+  padding: 0 !important ;
+  margin: 5px;
+  background-color: rebeccapurple;
+}
+.c-item-static img {
+  width: 100%;
+}
+
+.categoria {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
