@@ -59,7 +59,7 @@ function Details() {
                                     {data.tallas.map((x) => {
                                         return (
                                             <React.Fragment key={x}>
-                                                <div>{x.toUpperCase()}</div>
+                                                <div className="topic-item">{x.toUpperCase()}</div>
 
                                             </React.Fragment>);
                                     })}
@@ -71,19 +71,20 @@ function Details() {
                                     {data.colores.map((x) => {
                                         return (
                                             <React.Fragment key={x}>
-                                                <div>{x}</div>
+                                                <div className="topic-item">{x}</div>
 
                                             </React.Fragment>);
                                     })}
                                 </div>
+                                <h5 className="topic">Descripcion</h5>
+                                <div className="description-product">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, provident libero quis iure quos amet! Quasi consequatur nihil, ipsum perspiciatis unde, enim aliquam vel quidem debitis libero ullam odit magni!
+
+
+                                </div>
 
                             </div>
-                            <div className="description-details">
-                                <h3>Descripcion</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus rerum, sed possimus cumque, minus ratione exercitationem amet magni, dolorem quaerat in ipsum explicabo doloribus eligendi qui facilis molestias alias magnam?
-                                </p>
-                            </div>
+
 
 
                         </div>
