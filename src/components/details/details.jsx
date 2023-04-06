@@ -9,17 +9,14 @@ import './details.css';
 function Details() {
     const { id } = useParams();
 
-    const url = 'https://sport-elite-back.onrender.com/product';
+    const url = 'https://sport-elite-back.onrender.com/product/v1';
     const fetch = useFetch(url).data;
 
     let data;
 
     if (fetch) {
         data = fetch.find((x) => x._id === id);
-
     }
-
-
 
 
     return (<>
