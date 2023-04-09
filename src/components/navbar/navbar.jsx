@@ -1,193 +1,134 @@
-import { useRef, useState } from 'react';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import Offcanvas from 'react-bootstrap/Offcanvas';
-import { Link } from 'react-router-dom';
-import useFetch from '../../hooks/useFetch';
+import { useState, useEffect } from 'react'
 
+import logo from '../../img/logo.png'
+import './navbar.css'
+import downArrow from '../../icons/angle-small-down.png'
+import shopCart from '../../icons/shopping-cart.png'
+import menu from '../../icons/menu-burger.png'
 
-import logo from '../../img/logo.png';
-import './navbar.css';
+function NavBarMain () {
+  const [showBurguer, setShowBuguer] = useState(false)
+  const [showDama, setShowDama] = useState(false)
 
-function NavBarMain() {
-    const url = 'https://sport-elite-back.onrender.com/product';
+  function hideShow () {
+    setShowBuguer(!showBurguer)
+    console.log(showBurguer)
+  }
+  function hideShowDama () {
+    setShowBuguer(!showBurguer)
+  }
+  function hideShowCaballero () {
+    setShowDama(!showDama)
+  }
 
-
-    const data = useFetch(url).data;
-    const [categories, setCategories] = useState([]);
-
-
-    setInterval(() => {
-        fetch(url)
-            .then((response) => response.json())
-            .then((data) => console.log('sucess'))
-            .catch((error) => console.error(error));
-    }, 600000); // 10 minutos en milisegundos
-
-    if (data) {
-        data.map((x) => {
-
-            categories.push(x.categoria);
-
-
-        });
+  console.log(window.innerWidth)
+  useEffect(() => {
+    if (!showBurguer) {
+      document.documentElement.style.overflow = 'hidden'
+    } else {
+      document.documentElement.style.overflow = 'auto'
     }
+  }, [showBurguer])
 
+  useEffect(() => {
+    if (window.innerWidth < 500) {
+      setShowBuguer(true)
+    }
+  }, [])
 
-    const dropDownRefMen = useRef(null);
-    const dropDownRefWomen = useRef(null);
+  return (
+    <>
+      <nav id='navbar'>
+        <div className='handicap' />
 
+        <div id='resolution-left-continer'>
+          <img
+            id='menu-burguer' onClick={() => hideShow()} className='navbar-icon' src={menu} alt=''
+          />
 
-    const handleMenuMouseOut = () => {
-        dropDownRefMen.current.setAttribute('hidden', true);
+          <div id='opacity-background' hidden={showBurguer}>
+            <div id='left-nav'>
 
-    };
+              <div id='men-hover'>
 
+                Caballero
 
-    const handleMenuMouseOutWomen = () => {
-        dropDownRefWomen.current.setAttribute('hidden', true);
+                <img className='down-arrow' src={downArrow} alt='' />
+                <div className='dropdown-men'>
 
-    };
+                  <ul>
+                    <li>caballero</li>
+                    <li>Pantalones</li>
+                    <li>Chaquetas</li>
+                    <li>Zapatos</li>
+                    <li>Sudaderas</li>
+                  </ul>
+                  <ul>
+                    <li>Camisetas</li>
+                    <li>Vaqueros</li>
+                    <li>Abrigos</li>
+                    <li>Zapatillas</li>
+                    <li>Chalecos</li>
+                  </ul>
+                  <ul>
+                    <li>Polos</li>
+                    <li>Bermudas</li>
+                    <li>Chaqueta de cuero</li>
+                    <li>Botas</li>
+                    <li>Sombreros</li>
+                  </ul>
 
-    const handleMenuMouseOver = () => {
-        dropDownRefMen.current.removeAttribute('hidden');
-        handleMenuMouseOutWomen();
-    };
-
-    const handleMenuMouseOverWomen = () => {
-        dropDownRefWomen.current.removeAttribute('hidden');
-        handleMenuMouseOut();
-
-    };
-
-
-
-
-
-    const expand = 'md';
-    return (
-        <>
-
-
-            <Navbar key={expand} bg="light" expand={expand} className="mb-3" id="main-nav" >
-                <Container fluid>
-                    <Link to={'/'}>
-
-                        <Navbar.Brand>
-                            <img
-                                alt="sportelite"
-                                src={logo}
-                                className="d-inline-block align-top "
-                                id="logo"
-                            />
-                            <h2>SportElite</h2>
-
-                        </Navbar.Brand>
-                    </Link>
-
-                    <Navbar.Toggle
-                        aria-controls={`offcanvasNavbar-expand-${expand}`}
-                    />
-                    <Navbar.Offcanvas
-                        id={`offcanvasNavbar-expand-${expand}`}
-                        aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
-                        placement="end"
-                    >
-                        <Offcanvas.Header closeButton>
-                            <Offcanvas.Title
-                                id={`offcanvasNavbarLabel-expand-${expand}`}
-                            >
-                                SportElite
-                            </Offcanvas.Title>
-                        </Offcanvas.Header>
-                        <Offcanvas.Body>
-                            <Nav className="justify-content-end flex-grow-1 pe-3 tra">
-                                <Nav.Link
-                                    className="drop-link"
-                                    onMouseOver={handleMenuMouseOver}
-                                >
-                                    Hombre
-                                </Nav.Link>
-
-                                <Nav.Link
-                                    className="drop-link"
-                                    onMouseOver={handleMenuMouseOverWomen}
-                                >Mujer</Nav.Link>
-                            </Nav>
-                        </Offcanvas.Body>
-                    </Navbar.Offcanvas>
-                </Container>
-            </Navbar>
-
-            <div
-                className="drop-menu"
-                hidden
-                ref={dropDownRefMen}
-                onMouseOver={handleMenuMouseOver}
-                onMouseOut={handleMenuMouseOut}
-            >
-                <ul className="menu-list" onMouseOver={handleMenuMouseOver}>
-                    <li><Link to="category/tshirts">T-shirts</Link></li>
-                    <li><Link to="category/hoodies">Hoodies</Link></li>
-
-                </ul>
-
-                <ul className="menu-list" onMouseOver={handleMenuMouseOver}>
-                    <li><Link to="category/dresses">Dresses</Link></li>
-                    <li><Link to="category/skirts">Skirts</Link></li>
-
-                </ul>
-
-                <ul className="menu-list" onMouseOver={handleMenuMouseOver}>
-                    <li><Link to="category/suits">Suits</Link></li>
-                    <li><Link to="category/dress-shirts">Dress shirts</Link></li>
-
-                </ul>
-                <div className='all-products'>
-                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0aa19822-f6c9-47ee-8410-cf5e8657ea08/segunda-equipacion-liverpool-fc-tech-fleece-windrunner-sudadera-con-capucha-con-cremallera-completa-ccQSJ2.png" id='img-dropdown' alt="" />
-                    <p>Todos los productos</p>
                 </div>
-            </div>
-            <div
-                className="drop-menu"
-                hidden
-                ref={dropDownRefWomen}
-                onMouseOver={handleMenuMouseOverWomen}
-                onMouseOut={handleMenuMouseOutWomen}
-            >
-                <ul className="menu-list" onMouseOver={() => { handleMenuMouseOverWomen; }} >
-                    <li><Link to="/tshirts">asd</Link></li>
-                    <li><Link to="/hoodies">Hoodies</Link></li>
-                    <li><Link to="/sweaters">Sweaters</Link></li>
+              </div>
 
-                </ul>
+              <div id='woman-hover'>
+                Dama
+                <img className='down-arrow' src={downArrow} alt='' />
 
-                <ul className="menu-list" onMouseOver={handleMenuMouseOverWomen}>
-                    <li><Link to="/dresses">Dresses</Link></li>
-                    <li><Link to="/skirts">Skirts</Link></li>
+                <div className='dropdown-woman'>
 
-                </ul>
+                  <ul>
+                    <li>lea</li>
+                    <li>Pantalones</li>
+                    <li>Blusas</li>
+                    <li>Zapatos</li>
+                    <li>Faldas</li>
+                  </ul>
+                  <ul>
+                    <li>Chaquetas</li>
+                    <li>Jeans</li>
+                    <li>Sombreros</li>
+                    <li>Botas</li>
+                    <li>Bufandas</li>
+                  </ul>
+                  <ul>
+                    <li>Camisetas</li>
+                    <li>Leggings</li>
+                    <li>Zapatillas</li>
+                    <li>Cinturones</li>
+                    <li>Pantalones</li>
+                  </ul>
 
-                <ul className="menu-list" onMouseOver={handleMenuMouseOver}>
-                    <li><Link to="/suits">Suits</Link></li>
-                    <li><Link to="/dress-shirts">Dress shirts</Link></li>
-                    <li><Link to="/ties">Ties</Link></li>
-
-                </ul>
-                <Link>
-
-                    <div className='all-products'>
-                        <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/7c5a1997-f5c4-409f-8b96-80b0576929d1/sportswear-everyday-modern-sudadera-con-capucha-de-tejido-fleece-h6Wqpc.png" id='img-dropdown' alt="" />
-                        <p>Todos los productos</p>
-                    </div>
-                </Link>
+                </div>
+              </div>
 
             </div>
+          </div>
 
+        </div>
 
-        </>
-    );
+        <div id='center-nav'>
+          <img id='logo-navbar' src={logo} alt='' />
+
+        </div>
+
+        <img id='shop-cart' className='navbar-icon' src={shopCart} alt='' />
+
+      </nav>
+
+    </>
+
+  )
 }
 
-export default NavBarMain;
+export default NavBarMain

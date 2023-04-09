@@ -1,42 +1,27 @@
 
-import { BrowserRouter, Route, Routes, HashRouter } from "react-router-dom";
+import { Route, Routes, HashRouter } from 'react-router-dom'
 
+// components
+import NavBarMain from './components/navbar/navbar'
+import MainVideo from './components/mainvideo/mainvideo'
+import Cards from './components/cards/cardsContainer'
+import Lema from './components/lema/lema'
+import Carosuel from './components/carousel/corousel'
+import Footer from './components/footer/footer'
+import Details from './components/details/details'
+import TextBar from './components/textbar/textbar'
+import ProductForm from './components/productform/productform'
+import StaticCarosuel from './components/staticcarousel/staticcorousel'
+import './app.css'
+import './normalize.css'
 
-//components
-import NavBarMain from "./components/navbar/navbar";
-import MainVideo from "./components/mainvideo/mainvideo";
-import Cards from "./components/cards/cardsContainer";
-import Lema from "./components/lema/lema";
-import Carosuel from "./components/carousel/corousel";
-import Footer from "./components/footer/footer";
-import Details from "./components/details/details";
-import TextBar from "./components/textbar/textbar";
-import ProductForm from "./components/productform/productform";
-import StaticCarosuel from "./components/staticcarousel/staticcorousel";
+// styles
 
-
-
-//styles
-import './app.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'mdb-react-ui-kit/dist/css/mdb.min.css';
-import "@fortawesome/fontawesome-free/css/all.min.css";
-import "bootstrap-css-only/css/bootstrap.min.css";
-import "mdbreact/dist/css/mdb.css";
-
-
-
-
-
-
-
-
-function App() {
-
+function App () {
   return (
     <>
       <>
-        <HashRouter >
+        <HashRouter>
           <TextBar />
 
           <NavBarMain />
@@ -44,53 +29,60 @@ function App() {
 
             <Routes>
 
-              <Route index element={<>
+              <Route
+                index element={
+                  <>
 
-                <MainVideo />
-                <Lema />
-                <Carosuel titulo="Destacado" />
-                <Carosuel titulo="Mas vendidos" />
-                <StaticCarosuel titulo='Categorias' />
+                    <MainVideo />
+                    <Lema />
+                    <Carosuel titulo='Destacado' />
+                    <Carosuel titulo='Mas vendidos' />
+                    <StaticCarosuel titulo='Categorias' />
 
-              </>} />
+                  </>
+                }
+              />
 
-              <Route path="/category/:categoria" element={
-                <>
+              <Route
+                path='/category/:categoria' element={
+                  <>
 
-                  <Cards categoria='Conjuntos dri fit' />
+                    <Cards categoria='Conjuntos dri fit' />
 
-                </>} />
+                  </>
+                }
+              />
 
-              <Route path="category/:category/product/:id" element={
-                <>
+              <Route
+                path='category/:category/product/:id' element={
+                  <>
 
-                  <Details />
+                    <Details />
 
-                </>
-              } />
+                  </>
+              }
+              />
 
-              <Route path="/form" element={
-                <>
+              <Route
+                path='/form' element={
+                  <>
 
-                  <ProductForm />
+                    <ProductForm />
 
-                </>} />
+                  </>
+}
+              />
 
             </Routes>
           </div>
 
-
-
           <Footer />
-
-
 
         </HashRouter>
       </>
 
-
     </>
-  );
+  )
 }
 
-export default App;;
+export default App
