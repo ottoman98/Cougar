@@ -7,10 +7,7 @@
 }
 
 
-#split div {
 
-    aspect-ratio: 2/1;
-}
 
 
 
@@ -46,9 +43,9 @@
 
 .img-title {
     aspect-ratio: 1/1;
-    height: 28rem;
+    height: 22rem;
 
-    background-color: aqua;
+
 }
 
 
@@ -77,9 +74,7 @@
 
 .all-catalog {
 
-    width: 19rem;
-
-
+    width: 9rem;
     display: inline-block;
     height: 1.6rem;
     text-align: center;
@@ -117,5 +112,11 @@
     .splited-half-2 {
         display: none;
     }
+
+    .splited-half-1 {
+        padding: 90px 0;
+    }
+
+
 
 }

@@ -1,21 +1,65 @@
-.t {
-  background-color: rgba(0, 0, 0, 0.9);
-  color: white;
-  width: 100%;
-  margin-top: auto;
+@import url('../../variables.css');
+
+footer {
+  color: var(--font-light);
+  margin-top: 10rem;
+  background-color: var(--first);
+
+
+
 }
 
-.lower-footer {
+.footer {
+  padding: 6rem 0;
   display: flex;
+  margin: 0 auto;
+  max-width: 77rem;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.4);
+
 }
-.lower-footer p {
-  color: white;
-  text-align: center;
-  margin: 20px;
+
+.footer ul {
+  list-style: none;
 }
-.icon {
-  color: white;
-  margin: 20px;
+
+.footer ul li {
+  margin: 1.5rem 0;
+}
+
+#brand-footer {
+  display: flex;
+  align-items: center;
+}
+
+#brand-footer p {
+  font-size: 3rem;
+}
+
+#logo-footer {
+  height: 5rem;
+}
+
+.redes {
+  width: 100%;
+
+}
+
+.redes img {
+
+  padding: 5px;
+  height: 3rem;
+
+}
+
+@media (max-width:900px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+
+
+  }
+
+  .footer ul {
+    margin: 0 auto;
+  }
 }

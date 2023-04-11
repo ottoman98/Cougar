@@ -134,3 +134,10 @@
 #product-brand {
   font-size: small;
 }
+
+@media (max-width:900px) {
+  .product-item {
+    width: 7rem;
+  }
+
+}

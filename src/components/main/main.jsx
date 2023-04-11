@@ -17,7 +17,7 @@ function Main () {
             <p id='high-text'>El mundo del deporte a tus manos</p>
             <p id='low-text'>Que bendicion muchachos</p>
 
-            <div className='all-catalog'> Descrubre Todos nuestros productos</div>
+            <div className='all-catalog'> Descubre mas</div>
 
           </div>
 
