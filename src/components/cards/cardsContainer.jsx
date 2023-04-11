@@ -1,44 +1,89 @@
-import './cards.css';
-import useFetch from '../../hooks/useFetch.js';
-import CardProduct from '../card/card';
-import React from 'react';
 
+import TopTemplate from '../topTemplate/topTemplate'
+import './cards.css'
+import React from 'react'
 
-function Cards(props) {
-    const url = 'https://sport-elite-back.onrender.com/product/v1';
+function Cards (props) {
+  return (
+    <>
+      <div id='cards-section'>
+        <TopTemplate title='Nuestros destacados' content='mas destacados' />
 
-    const data = useFetch(url).data;
+        <div className='cards-container'>
 
-    return (
-        <>
-            <div className='cards-main'>
-                <h2>{props.categoria}</h2>
+          <div className='product-item'>
+            <img className='product-img' src='https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3e548ca32c7447daaf77afcd014ba31b_9366/Camiseta_Visitante_Seleccion_Colombia_Femenina_23_Multicolor_HS7544_01_laydown.jpg' alt='' />
 
-
-                <div className='cards' >
-
-
-                    {!data ? <></> : data.map(x => {
-                        return (
-
-                            <React.Fragment key={x._id}>
-                                <CardProduct data={x} />
-                            </React.Fragment>
-
-
-
-                        );
-                    })}
-
-                </div>
-
-
+            <div className='product-data'>
+              <p id='product-brand'>adedos</p>
+              <p>Camisea colombia</p>
+              <p>100.000$</p>
             </div>
 
+          </div>
 
-        </>
+          <div className='product-item'>
+            <img className='product-img' src='https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3e548ca32c7447daaf77afcd014ba31b_9366/Camiseta_Visitante_Seleccion_Colombia_Femenina_23_Multicolor_HS7544_01_laydown.jpg' alt='' />
 
-    );
+            <div className='product-data'>
+              <p id='product-brand'>adedos</p>
+              <p>Camisea colombia</p>
+              <p>100.000$</p>
+            </div>
+
+          </div>
+
+          <div className='product-item'>
+            <img className='product-img' src='https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3e548ca32c7447daaf77afcd014ba31b_9366/Camiseta_Visitante_Seleccion_Colombia_Femenina_23_Multicolor_HS7544_01_laydown.jpg' alt='' />
+
+            <div className='product-data'>
+              <p id='product-brand'>adedos</p>
+              <p>Camisea colombia</p>
+              <p>100.000$</p>
+            </div>
+
+          </div>
+
+          <div className='product-item'>
+            <img className='product-img' src='https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3e548ca32c7447daaf77afcd014ba31b_9366/Camiseta_Visitante_Seleccion_Colombia_Femenina_23_Multicolor_HS7544_01_laydown.jpg' alt='' />
+
+            <div className='product-data'>
+              <p id='product-brand'>adedos</p>
+              <p>Camisea colombia</p>
+              <p>100.000$</p>
+            </div>
+
+          </div>
+
+          <div className='product-item'>
+            <img className='product-img' src='https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3e548ca32c7447daaf77afcd014ba31b_9366/Camiseta_Visitante_Seleccion_Colombia_Femenina_23_Multicolor_HS7544_01_laydown.jpg' alt='' />
+
+            <div className='product-data'>
+              <p id='product-brand'>adedos</p>
+              <p>Camisea colombia</p>
+              <p>100.000$</p>
+            </div>
+
+          </div>
+
+          <div className='product-item'>
+            <img className='product-img' src='https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3e548ca32c7447daaf77afcd014ba31b_9366/Camiseta_Visitante_Seleccion_Colombia_Femenina_23_Multicolor_HS7544_01_laydown.jpg' alt='' />
+
+            <div className='product-data'>
+              <p id='product-brand'>adedos</p>
+              <p>Camisea colombia</p>
+              <p>100.000$</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </>
+
+  )
 }
 
-export default Cards;
+export default Cards

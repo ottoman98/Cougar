@@ -1,0 +1,39 @@
+#main-popular {
+
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+.brand-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.brand-div {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    padding: 1px;
+    overflow: hidden;
+
+}
+
+.brand-div:hover .back-image {
+
+    transition: 0.7s;
+    transform: scale(1.5);
+
+}
+
+
+
+.brand-over {
+    top: 30%;
+    margin-left: auto;
+    position: absolute;
+    height: 5rem;
+
+}

@@ -3,17 +3,19 @@ import { Route, Routes, HashRouter } from 'react-router-dom'
 
 // components
 import NavBarMain from './components/navbar/navbar'
-import MainVideo from './components/mainvideo/mainvideo'
+import Main from './components/main/main'
 import Cards from './components/cards/cardsContainer'
-import Lema from './components/lema/lema'
-import Carosuel from './components/carousel/corousel'
+import HighLighted from './components/highlighted/highlighted'
+
 import Footer from './components/footer/footer'
 import Details from './components/details/details'
 import TextBar from './components/textbar/textbar'
 import ProductForm from './components/productform/productform'
-import StaticCarosuel from './components/staticcarousel/staticcorousel'
+
 import './app.css'
 import './normalize.css'
+import PopularBrands from './components/popularbrands/popularBrands'
+import PreAbout from './components/preabout/preaAbout'
 
 // styles
 
@@ -33,11 +35,11 @@ function App () {
                 index element={
                   <>
 
-                    <MainVideo />
-                    <Lema />
-                    <Carosuel titulo='Destacado' />
-                    <Carosuel titulo='Mas vendidos' />
-                    <StaticCarosuel titulo='Categorias' />
+                    <Main />
+                    <HighLighted />
+                    <Cards />
+                    <PopularBrands />
+                    <PreAbout />
 
                   </>
                 }

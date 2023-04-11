@@ -1,0 +1,49 @@
+@import url('../../variables.css');
+
+.main-about {
+
+    width: 70%;
+    margin: 0 auto;
+    color: var(--font-dark);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem
+}
+
+.about-us {
+    width: 63%;
+    background-color: var(--white-background);
+    position: absolute;
+    top: -1rem;
+    left: -3rem;
+    border-radius: 1rem;
+    padding: 10px;
+
+
+}
+
+.run {
+    font-weight: bold;
+}
+
+.about-image {
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.button-more {
+    margin: 20px auto;
+    background-color: var(--light-blue);
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    color: var(--font-light);
+
+}
+
+.button-more:hover {
+    background-color: var(--light-blue-hover);
+    transition: 1s;
+}

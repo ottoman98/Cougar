@@ -1,0 +1,12 @@
+#cards-title p {
+    color: var(--font-light);
+    background-color: var(--light-blue);
+    border-radius: 100px;
+    padding: 0 10px;
+
+}
+
+#cards-title p:hover {
+    background-color: var(--light-blue-hover);
+    transition: 0.4s;
+}

@@ -1,35 +1,72 @@
 @import url(../../variables.css);
 
-.cards-main {
-  max-width: 90rem;
+
+#cards-section {
+
+  padding: 20px;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 1rem;
+  color: var(--font-dark);
 }
-.cards {
+
+#cards-title {
+  display: flex;
+  justify-content: space-between;
+
+
+  margin: 0 auto;
+
+
+
+
+}
+
+
+
+.cards-container {
+  border-radius: 10px;
+  background-color: var(--white-background);
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product-item {
+  margin: 10px;
+  overflow: hidden;
+
+  width: 13rem;
+}
+
+.product-item:hover .product-img {
+
+  transition: 0.7s;
+
+  transform: scale(0.9);
+  overflow: hidden;
+}
+
+
+
+.product-img {
   width: 100%;
-  border-top: black 3px solid;
 }
 
-.card-item {
-  margin: 5px;
-  max-width: 20rem;
-}
-.card-item img {
-  width: 100%;
-}
-.card-item-text {
-  padding: 8px;
+.product-data {
+
+  padding: 0
 }
 
-.card-item-text i {
-  color: var(--font-color-secondary);
+
+.product-data p {
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+
 }
 
-@media screen and (max-width: 1300px) {
-  .cards {
-    justify-content: center;
-  }
-  .card-item {
-    width: 11rem;
-  }
+#product-brand {
+  font-size: small;
 }
