@@ -2,34 +2,44 @@
 
 .main-about {
 
-    width: 70%;
     margin: 0 auto;
     color: var(--font-dark);
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-top: 2rem
+    margin-top: 2rem;
+    display: flex;
+
 }
 
+
 .about-us {
-    width: 63%;
+    width: 50%;
+    top: 1rem;
+    left: 2rem;
     background-color: var(--white-background);
     position: absolute;
-    top: -1rem;
-    left: -3rem;
+
     border-radius: 1rem;
     padding: 10px;
 
 
 }
 
-.run {
+h3 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.bold-text {
     font-weight: bold;
 }
 
 .about-image {
+    height: 30rem;
     width: 100%;
     margin: 0 auto;
+
 
 }
 
@@ -46,4 +56,18 @@
 .button-more:hover {
     background-color: var(--light-blue-hover);
     transition: 1s;
+}
+
+
+@media (max-width:900px){
+    .about-us{
+        width: 90%;
+       position: relative;
+       margin-top: -10rem;
+       left: 1rem;
+       
+      
+      
+    }
+
 }

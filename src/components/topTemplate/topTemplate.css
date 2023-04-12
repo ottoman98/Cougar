@@ -6,7 +6,15 @@
 
 }
 
+
 #cards-title p:hover {
     background-color: var(--light-blue-hover);
     transition: 0.4s;
+}
+
+@media (max-width:900px) {
+    #cards-title p{
+        text-align: center;
+        padding: 12px ;
+    }
 }

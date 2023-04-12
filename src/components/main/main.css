@@ -114,7 +114,18 @@
     }
 
     .splited-half-1 {
-        padding: 90px 0;
+        padding:  0 0 15px 0 ;
+    }
+    .main-text{
+        position: relative;
+        margin-top: -14rem;
+        top: 0;
+        left: 0;
+       
+        
+        
+        
+       
     }
 
 

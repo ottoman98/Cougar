@@ -136,8 +136,13 @@
 }
 
 @media (max-width:900px) {
+
   .product-item {
-    width: 7rem;
+    width: 8rem;
   }
 
+  .product-item:hover .data-hide {
+    width: 8rem
+  }
+  
 }
