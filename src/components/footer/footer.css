@@ -4,6 +4,9 @@ footer {
   color: var(--font-light);
   margin-top: 10rem;
   background-color: var(--first);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 
 
 

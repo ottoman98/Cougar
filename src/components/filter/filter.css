@@ -1,0 +1,49 @@
+@import url(../../variables.css);
+
+.filter {
+  margin: 30px;
+  width: 15rem;
+  padding: 10px;
+  background-color: var(--white-background);
+}
+.filter h2 {
+  color: rebeccapurple;
+  font-weight: bold;
+}
+.title-filter {
+  display: flex;
+  justify-content: space-between;
+}
+
+#plus {
+  height: 1.5rem;
+}
+.filter ul {
+  width: 10rem;
+  list-style: none;
+  justify-content: center;
+}
+
+.tallas {
+  display: flex;
+}
+
+.price-range {
+  width: 40%;
+}
+#filter-button {
+  display: inline-block;
+  width: 4rem;
+  margin-right: 30%;
+  margin-left: 30%;
+  padding: 4px;
+  border-radius: 100px;
+  text-align: center;
+  background-color: var(--green-money);
+  margin-top: 2rem;
+  color: var(--font-light);
+}
+
+#filter-button:hover {
+  background-color: var(--green-money-hover);
+}

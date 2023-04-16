@@ -1,32 +1,23 @@
 @import url(../../variables.css);
 
+.full-cards {
+  display: flex;
+  margin: 0 auto;
+}
 
 #cards-section {
-
   padding: 20px;
   width: 90%;
   margin: 0 auto;
   border-radius: 1rem;
   color: var(--font-dark);
 }
-
-#cards-title {
-  display: flex;
-  justify-content: space-between;
-
-
-  margin: 0 auto;
-
-
-
-
+#cards-body {
+  background-color: var(--white-background);
 }
-
-
-
 .cards-container {
   border-radius: 10px;
-  background-color: var(--white-background);
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -36,12 +27,10 @@
   margin: 10px;
   overflow: hidden;
 
-
   width: 13rem;
 }
 
 .product-item:hover .product-img {
-
   transition: 0.7s;
   transform: scale(0.9);
   overflow: hidden;
@@ -51,40 +40,31 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-
-
 .product-img {
   width: 100%;
 }
 
 .product-data {
-
-  padding: 0
+  padding: 0;
 }
-
 
 .product-data p {
   display: block;
   font-weight: bold;
   text-align: center;
   margin: 0;
-
 }
 
 .data-hide {
   display: none;
-
 }
 
 .product-item:hover .data-hide {
-
   position: absolute;
   background-color: var(--white-background);
   display: block;
   width: 13rem;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.24);
-
-
 }
 
 .colores {
@@ -94,15 +74,12 @@
 }
 
 .color {
-
   margin: 5px;
   display: inline-block;
   background-color: rebeccapurple;
   border-radius: 100%;
   height: 1rem;
   width: 1rem;
-
-
 }
 
 .color:hover {
@@ -114,35 +91,44 @@
 .tallas {
   display: flex;
   justify-content: center;
-
 }
 
 .talla {
-
   padding: 5px 3px;
   font-weight: bold;
   margin: 10px;
   border: 1px solid var(--white-background);
-
 }
 
 .talla:hover {
   border: 1px solid var(--light-blue);
   border-radius: 3px;
 }
+.add {
+  display: inline-block;
+  background-color: var(--green-money);
+  padding: 5px;
+  text-align: center;
+  margin-left: 17%;
+  margin-right: 17%;
+  border-radius: 100px;
+  color: var(--font-light);
+}
+.add:hover {
+  transition: 0.4s;
+  background-color: var(--green-money-hover);
+}
 
 #product-brand {
   font-size: small;
 }
 
-@media (max-width:900px) {
-
+@media (max-width: 900px) {
   .product-item {
     width: 8rem;
   }
 
   .product-item:hover .data-hide {
-    width: 8rem
+    width: 8rem;
   }
-  
 }

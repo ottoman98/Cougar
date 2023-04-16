@@ -1,47 +1,102 @@
-#main-product-page {
-  max-width: 80rem;
+@import url("../../variables.css");
+
+#details {
+  margin-top: 20px;
+  gap: 20px;
+  display: flex;
+  color: var(--font-dark);
+}
+.info {
+  padding: 20px;
 }
 
-.main-details {
+.info h4 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.item div {
   display: flex;
-  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
-  margin-bottom: 50px;
-  margin: 0 auto;
-}
-.main-details-item {
-  padding: 30px;
-}
-.name-product {
-  min-width: 20rem;
-  max-width: 30rem;
-}
-
-.antes-ahora {
-  display: flex;
-  flex-direction: column;
 }
 
 .topic {
   font-weight: bold;
-  border-bottom: 1px solid black;
 }
-.topic-container {
+
+#precio {
+  font-weight: bold;
+}
+.item div p {
+  background-color: var(--font-light);
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--font-light);
+}
+
+.item div p:hover {
+  border-color: var(--light-blue);
+}
+.delivery-info div {
   display: flex;
+  gap: 10px;
 }
-.topic-item {
-  margin: 10px;
-  font-weight: bolder;
+h5 {
+  font-weight: bold;
 }
-.description-product {
-  min-width: 20rem;
-  max-width: 30rem;
+.info-icons {
+  height: 2rem;
+  filter: invert(63%) sepia(65%) saturate(806%) hue-rotate(180deg)
+    brightness(102%) contrast(103%);
 }
-@media screen and (max-width: 1100px) {
-  .main-details {
-    justify-content: baseline;
+
+.add-cart img {
+  height: 1.3rem;
+  filter: invert(100%);
+}
+.box {
+  width: 50%;
+  background-color: var(--white-background);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+.quantity-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 50%;
+  gap: 20px;
+  background-color: var(--orange-background);
+}
+.quantity-selector p {
+  margin: auto 0;
+}
+
+.add-cart {
+  padding: 10px;
+  text-align: center;
+  border-radius: 100px;
+  background-color: var(--green-money);
+  color: var(--font-light);
+}
+.add-cart:hover {
+  background-color: var(--green-money-hover);
+  transition: 0.4s;
+}
+
+@media (max-width: 1100px) {
+  #details {
+    justify-content: center;
+    flex-wrap: wrap;
   }
-  .main-details-item {
-    width: 100%;
-  }
+}
+
+#details-description {
+  background-color: var(--white-background);
+  padding: 20px;
 }

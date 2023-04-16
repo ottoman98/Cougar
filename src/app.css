@@ -1,18 +1,20 @@
 @import url('./variables.css');
 
 body {
+
   font-family: 'Fjalla One', sans-serif;
   background-color: var(--orange-background);
+  position: relative;
+  padding-bottom: 70rem;
   
-
-
-
 }
 
 .body {
+  
   max-width: 77rem;
   width: 8;
   margin: 0 auto;
+ 
 }
 
 

@@ -1,6 +1,5 @@
 import './highlighted.css'
 import img from '../../img/sunset.jpg'
-import Carosuel from '../carousel/corousel'
 
 function HighLighted () {
   return (
@@ -59,9 +58,6 @@ function HighLighted () {
 
       </div>
 
-      <div id='touch-screens'>
-        <Carosuel />
-      </div>
     </div>
   )
 }

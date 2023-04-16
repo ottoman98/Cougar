@@ -4,18 +4,18 @@ import { Route, Routes, HashRouter } from 'react-router-dom'
 // components
 import NavBarMain from './components/navbar/navbar'
 import Main from './components/main/main'
-import Cards from './components/cards/cardsContainer'
+import Cards from './components/cards/cards'
 import HighLighted from './components/highlighted/highlighted'
 
 import Footer from './components/footer/footer'
-import Details from './components/details/details'
+
 import TextBar from './components/textbar/textbar'
-import ProductForm from './components/productform/productform'
 
 import './app.css'
 import './normalize.css'
 import PopularBrands from './components/popularbrands/popularBrands'
 import PreAbout from './components/preabout/preaAbout'
+import Details from './components/details/details'
 
 // styles
 
@@ -47,31 +47,23 @@ function App () {
 
               <Route
                 path='/category/:categoria' element={
-                  <>
-
-                    <Cards categoria='Conjuntos dri fit' />
-
-                  </>
+                  <Cards />
                 }
               />
 
               <Route
-                path='category/:category/product/:id' element={
+                path='/:category/:id' element={
                   <>
-
                     <Details />
-
                   </>
               }
               />
 
               <Route
                 path='/form' element={
-                  <>
 
-                    <ProductForm />
+                  <Footer />
 
-                  </>
 }
               />
 

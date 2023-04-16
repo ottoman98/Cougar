@@ -253,6 +253,8 @@
 #logo-navbar {
   height: 4rem;
 
+  filter: invert(100%);
+
   margin: 0 auto;
 }
 
@@ -264,6 +266,7 @@
 
   margin: auto 0;
   height: 2rem;
+  filter: invert(100%);
 }
 
 .line {

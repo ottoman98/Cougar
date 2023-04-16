@@ -1,103 +1,97 @@
-import React from "react";
-import { useParams } from "react-router-dom";
-import useFetch from "../../hooks/useFetch";
-import Carosuel from "../carousel/corousel";
-import Gallery from "../gallery/gallery";
-import numberSeparator from "../../utils/thousands_separator";
-import './details.css';
+import { useState } from 'react'
+import Gallery from '../gallery/gallery'
+import './details.css'
+import truck from '../../icons/truck-moving.png'
+import clock from '../../icons/time-forward.png'
+import cart from '../../icons/shopping-cart.png'
+import Cards from '../cards/cards'
 
-function Details() {
-    const { id } = useParams();
+function Details () {
+  const imgs = ['https://cdn.webshopapp.com/shops/277570/files/329026334/500x500x2/apollo-bio-katoenen-sneakersokken.jpg', 'https://cdn.webshopapp.com/shops/277570/files/329026325/500x500x2/apollo-bio-katoenen-sneakersokken.jpg']
 
-    const url = 'https://sport-elite-back.onrender.com/product/v1';
-    const fetch = useFetch(url).data;
+  const [cantidad, setCatidad] = useState(0)
 
-    let data;
-
-    if (fetch) {
-        data = fetch.find((x) => x._id === id);
+  function cantidadAdd () {
+    setCatidad(cantidad + 1)
+  }
+  function cantidadSubstract () {
+    if (cantidad > 0) {
+      setCatidad(cantidad - 1)
     }
+  }
 
+  return (
+    <>
+      <div id='details'>
 
-    return (<>
-        {fetch ?
-            <>
-                <div id="main-product-page">
+        <Gallery imgs={imgs} />
 
-                    <div className="main-details">
+        <div className='info'>
+          <h4>Apollo Bio katoenen sneakersokken</h4>
+          <div className='item'>
 
-                        <Gallery imgs={data.imgUrls} className="main-details-item" />
-                        <div className="main-details-item ">
+            <h5 id='precio'>$ 3000</h5>
 
-                            <div id="product-info">
-                                <h2 className="name-product">{data.nombre.charAt(0).toUpperCase() + data.nombre.slice(1)}</h2>
+          </div>
 
+          <div className='item'>
+            <p className='topic'>Tallas:</p>
+            <div className='tallas'>
+              <p>S</p>
+              <p>M</p>
+              <p>L</p>
+            </div>
 
-                                {data.descuento == 0 ?
-                                    <p className="antes-despues">
-                                        <span className="ahora-card">{numberSeparator(data.precio)} <span>$</span></span>
-                                    </p>
-                                    :
-                                    <p className="antes-ahora">
+          </div>
+          <div className='item'>
+            <p className='topic'>Colores:</p>
+            <div>
+              <p>S</p>
+              <p>M</p>
+              <p>L</p>
+            </div>
 
-                                        <span className="antes-card">{numberSeparator(data.precio)} <span>$</span></span>
-                                        <span className="ahora-card">{numberSeparator(data.precio * ((100 - data.descuento) / 100))} <span>$</span></span>
+          </div>
+          <div className='quantity'>
+            <p className='topic'>Cantidad</p>
+            <div className='box'>
+              <div className='quantity-selector'>
+                <p onClick={() => cantidadSubstract()}>-</p><p>{cantidad}</p><p onClick={() => cantidadAdd()}>+</p>
+              </div>
+              <div id='total'>| {cantidad * 3000}</div>
 
-                                    </p>
-                                }
+            </div>
+          </div>
+          <div className='delivery-info'>
+            <div>
+              <img className='info-icons' src={truck} alt='' />
+              <p>
+                <h5>Costos de envio</h5>
+                Envío gratuito a partir de 25 euros.
+              </p>
+            </div>
+            <div>
+              <img className='info-icons' src={clock} alt='' />
+              <p>
+                <h5>Tiempos de entrega</h5>
+                1-2 Dias
+              </p>
+            </div>
+          </div>
 
+          <p className='add-cart'><img src={cart} alt='' /> Agregar al carrito</p>
+        </div>
 
-
-
-
-                                <h5 className="topic">Tallas</h5>
-                                <div className="topic-container">
-
-                                    {data.tallas.map((x) => {
-                                        return (
-                                            <React.Fragment key={x}>
-                                                <div className="topic-item">{x.toUpperCase()}</div>
-
-                                            </React.Fragment>);
-                                    })}
-                                </div>
-
-                                <h5 className="topic">Colores</h5>
-                                <div className="topic-container">
-
-                                    {data.colores.map((x) => {
-                                        return (
-                                            <React.Fragment key={x}>
-                                                <div className="topic-item">{x}</div>
-
-                                            </React.Fragment>);
-                                    })}
-                                </div>
-                                <h5 className="topic">Descripcion</h5>
-                                <div className="description-product">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, provident libero quis iure quos amet! Quasi consequatur nihil, ipsum perspiciatis unde, enim aliquam vel quidem debitis libero ullam odit magni!
-
-
-                                </div>
-
-                            </div>
-
-
-
-                        </div>
-
-
-                    </div>
-                    <Carosuel titulo="Completa  tu look" />
-                </div>
-
-            </>
-            : null}
-
-
-
-
-    </>);
+      </div>
+      <div id='details-description'>
+        <h3>Descripcion</h3>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores hic illo architecto, nobis, quas velit veniam voluptas veritatis earum amet temporibus perferendis doloremque illum esse voluptate, delectus magnam eaque numquam?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. At ab quas nobis, minima debitis, ratione architecto magnam, quam dolore laboriosam quaerat expedita. Animi, consectetur quae accusamus id eveniet ad fuga.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod temporibus obcaecati rem repudiandae, velit alias autem tempora facilis amet, placeat quam fugiat assumenda sequi minus consequuntur voluptates tenetur deleniti dicta.
+      </div>
+      <Cards />
+    </>
+  )
 }
 
-export default Details;
+export default Details

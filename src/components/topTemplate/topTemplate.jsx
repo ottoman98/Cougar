@@ -4,7 +4,9 @@ function TopTemplate ({ title, content }) {
     <>
       <div id='cards-title'>
         <h3>{title}</h3>
-        <p>{content}</p>
+
+        {content ? <p>{content}</p> : null}
+
       </div>
     </>
   )

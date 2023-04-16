@@ -5,6 +5,7 @@ import './navbar.css'
 import downArrow from '../../icons/angle-small-down.png'
 import shopCart from '../../icons/shopping-cart.png'
 import menu from '../../icons/menu-burger.png'
+import { Link } from 'react-router-dom'
 
 function NavBarMain () {
   const [showBurguer, setShowBuguer] = useState(false)
@@ -34,8 +35,6 @@ function NavBarMain () {
   useEffect(() => {
     if (window.innerWidth < 500) {
       setShowBuguer(true)
-      setShowDama(true)
-      setShowHombre(true)
     }
   }, [])
 
@@ -55,6 +54,7 @@ function NavBarMain () {
 
               <div id='men-hover'>
                 <div onClick={() => hideShowHombre()}>
+
                   Caballero
 
                   <img className='down-arrow' src={downArrow} alt='' />
@@ -63,31 +63,30 @@ function NavBarMain () {
                 <div className='dropdown-men' hidden={showHombre}>
 
                   <div className='dropdown-half'>
-                    <p className='dropdown-title'>Po,pósas pintas</p>
+                    <p className='dropdown-title'> <Link>Po,pósas pintas</Link> </p>
                     <div />
 
                     <div className='list-nav'>
-
                       <ul>
-                        <li>caballero</li>
-                        <li>Pantalones</li>
-                        <li>Chaquetas</li>
-                        <li>Zapatos</li>
-                        <li>Sudaderas</li>
+                        <li><Link to='/category/caballero'>Caballero</Link></li>
+                        <li><Link to='/category/pantalones'>Pantalones</Link></li>
+                        <li><Link to='/category/chaquetas'>Chaquetas</Link></li>
+                        <li><Link to='/category/zapatos'>Zapatos</Link></li>
+                        <li><Link to='/category/sudaderas'>Sudaderas</Link></li>
                       </ul>
                       <ul>
-                        <li>Camisetas</li>
-                        <li>Vaqueros</li>
-                        <li>Abrigos</li>
-                        <li>Zapatillas</li>
-                        <li>Chalecos</li>
+                        <li><Link to='/category/camisetas'>Camisetas</Link></li>
+                        <li><Link to='/category/vaqueros'>Vaqueros</Link></li>
+                        <li><Link to='/category/abrigos'>Abrigos</Link></li>
+                        <li><Link to='/category/zapatillas'>Zapatillas</Link></li>
+                        <li><Link to='/category/chalecos'>Chalecos</Link></li>
                       </ul>
                       <ul>
-                        <li>Polos</li>
-                        <li>Bermudas</li>
-                        <li>Chaqueta de cuero</li>
-                        <li>Botas</li>
-                        <li>Sombreros</li>
+                        <li><Link to='/category/polos'>Polos</Link></li>
+                        <li><Link to='/category/bermudas'>Bermudas</Link></li>
+                        <li><Link to='/category/chaqueta-de-cuero'>Chaqueta de cuero</Link></li>
+                        <li><Link to='/category/botas'>Botas</Link></li>
+                        <li><Link to='/category/sombreros'>Sombreros</Link></li>
                       </ul>
 
                     </div>
@@ -114,25 +113,25 @@ function NavBarMain () {
                     <div className='list-nav'>
 
                       <ul>
-                        <li>caballero</li>
-                        <li>Pantalones</li>
-                        <li>Chaquetas</li>
-                        <li>Zapatos</li>
-                        <li>Sudaderas</li>
+                        <li><Link to='/category/caballero'>Caballero</Link></li>
+                        <li><Link to='/category/pantalones'>Pantalones</Link></li>
+                        <li><Link to='/category/chaquetas'>Chaquetas</Link></li>
+                        <li><Link to='/category/zapatos'>Zapatos</Link></li>
+                        <li><Link to='/category/sudaderas'>Sudaderas</Link></li>
                       </ul>
                       <ul>
-                        <li>Camisetas</li>
-                        <li>Vaqueros</li>
-                        <li>Abrigos</li>
-                        <li>Zapatillas</li>
-                        <li>Chalecos</li>
+                        <li><Link to='/category/camisetas'>Camisetas</Link></li>
+                        <li><Link to='/category/vaqueros'>Vaqueros</Link></li>
+                        <li><Link to='/category/abrigos'>Abrigos</Link></li>
+                        <li><Link to='/category/zapatillas'>Zapatillas</Link></li>
+                        <li><Link to='/category/chalecos'>Chalecos</Link></li>
                       </ul>
                       <ul>
-                        <li>Polos</li>
-                        <li>Bermudas</li>
-                        <li>Chaqueta de cuero</li>
-                        <li>Botas</li>
-                        <li>Sombreros</li>
+                        <li><Link to='/category/polos'>Polos</Link></li>
+                        <li><Link to='/category/bermudas'>Bermudas</Link></li>
+                        <li><Link to='/category/chaqueta-de-cuero'>Chaqueta de cuero</Link></li>
+                        <li><Link to='/category/botas'>Botas</Link></li>
+                        <li><Link to='/category/sombreros'>Sombreros</Link></li>
                       </ul>
 
                     </div>
@@ -147,7 +146,9 @@ function NavBarMain () {
         </div>
 
         <div id='center-nav'>
-          <img id='logo-navbar' src={logo} alt='' />
+          <Link to='/'>
+            <img id='logo-navbar' src={logo} alt='' />
+          </Link>
 
         </div>
 

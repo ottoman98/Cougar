@@ -44,15 +44,10 @@
 .arrow-right {
   width: 2rem;
   margin: 5px;
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 50%;
+
   padding: 5px;
 }
 
-.arrow-left:hover,
-.arrow-right:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-}
 .arrow-left {
   transform: scaleX(-1);
 }
