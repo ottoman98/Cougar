@@ -7,9 +7,10 @@
   background-color: var(--white-background);
 }
 .filter h2 {
-  color: rebeccapurple;
   font-weight: bold;
+  text-align: center;
 }
+
 .title-filter {
   display: flex;
   justify-content: space-between;
@@ -46,4 +47,31 @@
 
 #filter-button:hover {
   background-color: var(--green-money-hover);
+}
+@media (max-width: 900px) {
+  .filter {
+    width: 100%;
+    margin: 0;
+  }
+  .filter-items {
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+    left: 0;
+    background-color: var(--white-background);
+  }
+  .filter h2 {
+    background-color: var(--first);
+    color: var(--font-light);
+  }
+  .tallas-filter ul,
+  .colores-filter ul,
+  .precio-filter {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+  #filter-button {
+    margin: 20px 45%;
+  }
 }

@@ -5,9 +5,21 @@ import truck from '../../icons/truck-moving.png'
 import clock from '../../icons/time-forward.png'
 import cart from '../../icons/shopping-cart.png'
 import Cards from '../cards/cards'
+import { useParams } from 'react-router-dom'
+import useFetch from '../../hooks/useFetch'
 
 function Details () {
   const imgs = ['https://cdn.webshopapp.com/shops/277570/files/329026334/500x500x2/apollo-bio-katoenen-sneakersokken.jpg', 'https://cdn.webshopapp.com/shops/277570/files/329026325/500x500x2/apollo-bio-katoenen-sneakersokken.jpg']
+
+  const { id } = useParams()
+
+  const url = 'https://sport-elite-back.onrender.com/product/v1'
+  const data = useFetch(url, 'GET')
+  let found
+  if (data) {
+    found = data.find((x) => x._id === id)
+    console.log(found)
+  }
 
   const [cantidad, setCatidad] = useState(0)
 
@@ -65,15 +77,15 @@ function Details () {
           <div className='delivery-info'>
             <div>
               <img className='info-icons' src={truck} alt='' />
+              <h5>Costos de envio</h5>
               <p>
-                <h5>Costos de envio</h5>
                 Envío gratuito a partir de 25 euros.
               </p>
             </div>
             <div>
               <img className='info-icons' src={clock} alt='' />
+              <h5>Tiempos de entrega</h5>
               <p>
-                <h5>Tiempos de entrega</h5>
                 1-2 Dias
               </p>
             </div>
@@ -89,6 +101,7 @@ function Details () {
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. At ab quas nobis, minima debitis, ratione architecto magnam, quam dolore laboriosam quaerat expedita. Animi, consectetur quae accusamus id eveniet ad fuga.
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod temporibus obcaecati rem repudiandae, velit alias autem tempora facilis amet, placeat quam fugiat assumenda sequi minus consequuntur voluptates tenetur deleniti dicta.
       </div>
+
       <Cards />
     </>
   )

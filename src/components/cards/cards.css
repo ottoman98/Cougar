@@ -26,6 +26,7 @@
 .product-item {
   margin: 10px;
   overflow: hidden;
+  color: var(--font-dark);
 
   width: 13rem;
 }
@@ -45,7 +46,7 @@
 }
 
 .product-data {
-  padding: 0;
+  font-weight: 100;
 }
 
 .product-data p {
@@ -130,5 +131,8 @@
 
   .product-item:hover .data-hide {
     width: 8rem;
+  }
+  .full-cards {
+    flex-direction: column;
   }
 }

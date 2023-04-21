@@ -37,7 +37,7 @@ function App () {
 
                     <Main />
                     <HighLighted />
-                    <Cards />
+                    <Cards title='Destacados' />
                     <PopularBrands />
                     <PreAbout />
 
@@ -52,7 +52,7 @@ function App () {
               />
 
               <Route
-                path='/:category/:id' element={
+                path='/:id' element={
                   <>
                     <Details />
                   </>
