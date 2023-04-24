@@ -37,6 +37,15 @@
 .item div p:hover {
   border-color: var(--light-blue);
 }
+
+.color-detail {
+  margin: 5px;
+  display: inline-block;
+  border-radius: 100%;
+  height: 1rem;
+  width: 1rem;
+  border: 1px solid var(--first);
+}
 .delivery-info div {
   display: flex;
   gap: 10px;

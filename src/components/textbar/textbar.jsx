@@ -1,12 +1,12 @@
-import './textbar.css';
+import './textbar.css'
 
-
-function TextBar() {
-    return (
-        <>
-            <div id='text-container'>
-                <p>Envio gratis $100.000+</p>
-            </div> </>
-    );
+function TextBar () {
+  return (
+    <>
+      <div id='text-container'>
+        <p>Envio gratis</p>
+      </div>
+    </>
+  )
 }
-export default TextBar;
+export default TextBar

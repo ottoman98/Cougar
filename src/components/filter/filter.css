@@ -5,6 +5,7 @@
   width: 15rem;
   padding: 10px;
   background-color: var(--white-background);
+  border-radius: 10px;
 }
 .filter h2 {
   font-weight: bold;
@@ -31,6 +32,15 @@
 
 .price-range {
   width: 40%;
+}
+.color-filter {
+  margin: 5px;
+  display: inline-block;
+  background-color: rebeccapurple;
+  border-radius: 100%;
+  height: 1rem;
+  width: 1rem;
+  border: 1px solid var(--first);
 }
 #filter-button {
   display: inline-block;

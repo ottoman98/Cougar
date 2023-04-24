@@ -85,6 +85,7 @@
   }
   .bottom {
     flex-wrap: wrap;
+    padding: 0;
   }
   .img-div {
     width: 9rem;

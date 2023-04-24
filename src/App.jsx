@@ -37,7 +37,7 @@ function App () {
 
                     <Main />
                     <HighLighted />
-                    <Cards title='Destacados' />
+                    <Cards title='Destacados' button='Ver mas Destacados' />
                     <PopularBrands />
                     <PreAbout />
 
@@ -46,7 +46,7 @@ function App () {
               />
 
               <Route
-                path='/category/:categoria' element={
+                path='/:gender/:categoria' element={
                   <Cards />
                 }
               />

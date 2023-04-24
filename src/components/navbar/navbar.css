@@ -1,4 +1,4 @@
-@import url('../../variables.css');
+@import url("../../variables.css");
 
 #navbar {
   display: flex;
@@ -6,43 +6,38 @@
   padding: 0 20px;
   background-color: var(--first);
   color: var(--font-light);
-
-
-
-
 }
 
 .handicap {
   display: none;
 }
 
-
 /* left full windows */
 
 .down-arrow {
   width: 1rem;
 }
-
-.dropdown-men ul li:hover,
-.dropdown-woman ul li:hover {
-
-  color: var(--light-blue);
-  transition: 0.6s;
-
+.dropdown-men ul li a,
+.dropdown-woman ul li a {
+  text-decoration: none;
+}
+.dropdown-title a {
+  text-decoration: none;
 }
 
-
+.dropdown-men ul li a:hover,
+.dropdown-woman ul li a:hover {
+  color: var(--light-blue);
+  text-decoration: underline;
+  transition: 0.6s;
+}
 
 @media screen and (min-width: 500px) {
   #left-nav {
-
     display: flex;
     align-items: end;
     height: 100%;
-
-
   }
-
 
   #men-hover,
   #woman-hover {
@@ -64,32 +59,17 @@
     top: -55rem;
     left: 0;
     z-index: 3;
-
-
   }
 
   .dropdown-half {
     padding: 20px;
     width: 100%;
-
-
   }
 
   .img-half {
     display: flex;
     justify-content: space-around;
   }
-
-  .img-half img {
-
-    max-height: 10%;
-  }
-
-  #img-1 {
-    aspect-ratio: 2/1;
-  }
-
-
 
   .dropdown-title {
     font-weight: bolder;
@@ -98,14 +78,10 @@
   }
 
   .list-nav {
-
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
   }
-
-
 
   .dropdown-men ul,
   .dropdown-woman ul {
@@ -114,10 +90,8 @@
     opacity: 0;
   }
 
-
   #woman-hover:hover .dropdown-woman,
   #men-hover:hover .dropdown-men {
-
     top: 5rem;
     opacity: 1;
     transition: 0.5s;
@@ -125,8 +99,6 @@
     justify-content: space-around;
     max-height: 30rem;
   }
-
-
 
   #men-hover:hover .dropdown-men ul,
   #woman-hover:hover .dropdown-woman ul {
@@ -140,16 +112,12 @@
     height: 100%;
   }
 
-
-
-
   /*left small windows*/
 
   #menu-burguer {
     display: none;
   }
 }
-
 
 @media screen and (max-width: 500px) {
   .handicap {
@@ -171,31 +139,20 @@
 
     position: absolute;
     z-index: 69;
-
   }
 
-
-
-
-
-
   #left-nav {
-
     min-height: 100vh;
     width: 50%;
     background-color: white;
     flex-direction: column;
     justify-content: baseline;
-
   }
-
-
 
   #menu-burguer {
     display: block;
 
     padding: 2px;
-
   }
 
   #menu-burguer:hover {
@@ -210,7 +167,6 @@
 
   .dropdown-men,
   .dropdown-woman {
-
     opacity: 1;
     transition: none;
     flex-direction: column;
@@ -223,20 +179,11 @@
     display: none;
   }
 
-
-
   .dropdown-men ul,
   .dropdown-woman ul {
-
     list-style: none;
   }
-
-
-
-
 }
-
-
 
 /* center*/
 
@@ -260,10 +207,7 @@
 
 /*right*/
 
-
-
 .navbar-icon {
-
   margin: auto 0;
   height: 2rem;
   filter: invert(100%);

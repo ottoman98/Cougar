@@ -16,26 +16,19 @@ function Card ({ data }) {
         <p className='nombre'>{data.nombre}</p>
         <p className='precio'>$ {data.precio}</p>
       </div>
-      <div className='data-hide'>
-        <div className='colores'>
-          <div className='color'> </div>
-          <div className='color'> </div>
-          <div className='color'> </div>
-          <div className='color'> </div>
-        </div>
-        <div className='tallas'>
-          {data.tallas.map((x) => {
-            return (
-              <React.Fragment key={x}>
-                <div className='talla'>{x}</div>
-              </React.Fragment>
 
-            )
-          })}
+      <div className='colores'>
+        {data.colores.map((x) => {
+          return (
+            <React.Fragment key={x}>
+              <div className='color' style={{ backgroundColor: x }}> </div>
 
-        </div>
-        <p className='add'>Agregar al carrito</p>
+            </React.Fragment>
+          )
+        })}
+
       </div>
+
     </div>
 
   )

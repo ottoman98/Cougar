@@ -63,30 +63,33 @@ function NavBarMain () {
                 <div className='dropdown-men' hidden={showHombre}>
 
                   <div className='dropdown-half'>
-                    <p className='dropdown-title'> <Link>Po,pósas pintas</Link> </p>
+                    <p className='dropdown-title'> <Link>Caballeros</Link> </p>
                     <div />
 
                     <div className='list-nav'>
+
                       <ul>
-                        <li><Link to='/category/caballero'>Caballero</Link></li>
-                        <li><Link to='/category/pantalones'>Pantalones</Link></li>
-                        <li><Link to='/category/chaquetas'>Chaquetas</Link></li>
-                        <li><Link to='/category/zapatos'>Zapatos</Link></li>
-                        <li><Link to='/category/sudaderas'>Sudaderas</Link></li>
+
+                        <li><Link to='/hombre/zapatos'>Zapatos</Link></li>
+                        <li><Link to='/hombre/pantalones'>Pantalones</Link></li>
+                        <li><Link to='/hombre/sudaderas'>Sudaderas</Link></li>
+
                       </ul>
                       <ul>
-                        <li><Link to='/category/camisetas'>Camisetas</Link></li>
-                        <li><Link to='/category/vaqueros'>Vaqueros</Link></li>
-                        <li><Link to='/category/abrigos'>Abrigos</Link></li>
-                        <li><Link to='/category/zapatillas'>Zapatillas</Link></li>
-                        <li><Link to='/category/chalecos'>Chalecos</Link></li>
+
+                        <li><Link to='/hombre/camisetas'>Camisetas</Link></li>
+                        <li><Link to='/hombre/shorts'>Shorts</Link></li>
+                        <li><Link to='/hombre/camisillas'>Camisillas</Link></li>
+
                       </ul>
                       <ul>
-                        <li><Link to='/category/polos'>Polos</Link></li>
-                        <li><Link to='/category/bermudas'>Bermudas</Link></li>
-                        <li><Link to='/category/chaqueta-de-cuero'>Chaqueta de cuero</Link></li>
-                        <li><Link to='/category/botas'>Botas</Link></li>
-                        <li><Link to='/category/sombreros'>Sombreros</Link></li>
+
+                        <li><Link to='/hombre/mochilas'>Mochilas</Link></li>
+                        <li><Link to='/hombre/gorros-y-gorras'>Gorros y Gorras</Link></li>
+                        <li><Link to='/hombre/balones'>Balones</Link></li>
+                        <li><Link to='/hombre/gafas'>Gafas</Link></li>
+                        <li><Link to='/hombre/sombreros'>Cinturones</Link></li>
+
                       </ul>
 
                     </div>
@@ -106,32 +109,57 @@ function NavBarMain () {
 
                   <div className='dropdown-half'>
                     <p className='dropdown-title'>
-                      Po,pósas pintas opero de lea
+                      <Link>Damas</Link>
+
                     </p>
                     <div />
 
                     <div className='list-nav'>
 
                       <ul>
-                        <li><Link to='/category/caballero'>Caballero</Link></li>
-                        <li><Link to='/category/pantalones'>Pantalones</Link></li>
-                        <li><Link to='/category/chaquetas'>Chaquetas</Link></li>
-                        <li><Link to='/category/zapatos'>Zapatos</Link></li>
-                        <li><Link to='/category/sudaderas'>Sudaderas</Link></li>
+                        <li>
+                          <Link to='/mujer/Zapatos'>Zapatos</Link>
+                        </li>
+                        <li>
+                          <Link to='/mujer/tops'>Tops</Link>
+                        </li>
+                        <li>
+                          <Link to='/mujer/sudaderas'>Sudaderas</Link>
+                        </li>
+
                       </ul>
                       <ul>
-                        <li><Link to='/category/camisetas'>Camisetas</Link></li>
-                        <li><Link to='/category/vaqueros'>Vaqueros</Link></li>
-                        <li><Link to='/category/abrigos'>Abrigos</Link></li>
-                        <li><Link to='/category/zapatillas'>Zapatillas</Link></li>
-                        <li><Link to='/category/chalecos'>Chalecos</Link></li>
+
+                        <li>
+                          <Link to='/mujer/camisetas'>Camisetas</Link>
+                        </li>
+
+                        <li>
+                          <Link to='/mujer/vestidos-y-faldas'>Vestidos y faldas</Link>
+                        </li>
+
+                        <li>
+                          <Link to='/mujer/shorts'>shorts</Link>
+                        </li>
+                        <li><Link to='/mujer/leggings'>Leggings</Link></li>
+
                       </ul>
                       <ul>
-                        <li><Link to='/category/polos'>Polos</Link></li>
-                        <li><Link to='/category/bermudas'>Bermudas</Link></li>
-                        <li><Link to='/category/chaqueta-de-cuero'>Chaqueta de cuero</Link></li>
-                        <li><Link to='/category/botas'>Botas</Link></li>
-                        <li><Link to='/category/sombreros'>Sombreros</Link></li>
+
+                        <li>
+                          <Link to='/mujer/mochilas'>Mochilas</Link>
+                        </li>
+                        <li>
+                          <Link to='/mujer/bolsas-y-bolsos'>Bolsas Y Bolsos</Link>
+                        </li>
+                        <li>
+                          <Link to='/mujer/chaquetas'>Chaquetas</Link>
+                        </li>
+
+                        <li>
+                          <Link to='/mujer/sombreros'>Sombreros</Link>
+                        </li>
+
                       </ul>
 
                     </div>

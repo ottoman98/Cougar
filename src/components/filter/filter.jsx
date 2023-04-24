@@ -71,11 +71,7 @@ function Filter ({ data }) {
             {[...nonRepeatColores].map((x) => {
               return (
                 <React.Fragment key={x}>
-                  <li>
-
-                    <input type='checkbox' id={x} value={x} />
-                    <label htmlFor={x}>{x.charAt(0).toUpperCase() + x.slice(1)}</label>
-                  </li>
+                  <div className='color-filter' style={{ backgroundColor: x }} />
                 </React.Fragment>
               )
             })}
