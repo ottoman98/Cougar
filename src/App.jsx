@@ -1,4 +1,3 @@
-
 import { Route, Routes, HashRouter } from 'react-router-dom'
 
 // components
@@ -6,18 +5,16 @@ import NavBarMain from './components/navbar/navbar'
 import Main from './components/main/main'
 import Cards from './components/cards/cards'
 import HighLighted from './components/highlighted/highlighted'
-
 import Footer from './components/footer/footer'
-
-import TextBar from './components/textbar/textbar'
-
-import './app.css'
-import './normalize.css'
 import PopularBrands from './components/popularbrands/popularBrands'
-import PreAbout from './components/preabout/preaAbout'
 import Details from './components/details/details'
+import TextBar from './components/textbar/textbar'
+import Slider from './components/carousel/carousel'
 
 // styles
+import './app.css'
+import './normalize.css'
+import Guaranty from './components/guaranty/guaranty'
 
 function App () {
   return (
@@ -36,10 +33,11 @@ function App () {
                   <>
 
                     <Main />
+                    <Slider title='Mas Vendidos' slice={0} />
+                    <Guaranty />
                     <HighLighted />
-                    <Cards title='Destacados' button='Ver mas Destacados' />
                     <PopularBrands />
-                    <PreAbout />
+                    <Slider slice={40} />
 
                   </>
                 }

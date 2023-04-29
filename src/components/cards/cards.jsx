@@ -9,7 +9,7 @@ import men from '../../img/men.jpg'
 import './cards.css'
 
 function Cards ({ title, button }) {
-  const url = 'https://sport-elite-back.onrender.com/product/v1'
+  const url = 'https://cougar.onrender.com/product/v1'
   const data = useFetch(url, 'GET')
   const { categoria, gender } = useParams()
   const [more, setMore] = useState(12)
@@ -52,7 +52,12 @@ function Cards ({ title, button }) {
   }, [data])
 
   if (data) {
-    tra = data.filter((x) => x.genero === gender && x.categoria === categoria.replace(/-/g, ' '))
+    if (gender && categoria) {
+      tra = data.filter((x) => x.genero === gender && x.categoria === categoria.replace(/-/g, ' '))
+    }
+    if (!gender && !categoria) {
+      tra = data.slice(data.length - more, data.length)
+    }
   }
 
   return (
@@ -68,7 +73,7 @@ function Cards ({ title, button }) {
       {categoria && gender
         ? <div id='breadcrumb'>
           <Link to='/'>Home</Link> / <Link>{gender}</Link> / {categoria}
-          </div>
+        </div>
         : null}
 
       {!data
@@ -100,9 +105,9 @@ function Cards ({ title, button }) {
 
             <span id='showmore' hidden={hide} onClick={() => setMore(more + 12)}>MOSTRAR 12 MÁS</span>
           </div>
-        </div>
+             </div>
 
-        </>}
+          </>}
     </>
 
   )

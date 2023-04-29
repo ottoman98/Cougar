@@ -1,10 +1,11 @@
 import './preaAbout.css'
+import img from '../../img/people.jpg'
 
 function PreAbout () {
   return (
     <>
       <div className='main-about'>
-        <img className='about-image' src='https://cdn.webshopapp.com/shops/277570/themes/177681/v/838685/assets/home-content.png?20210826195110' alt='' />
+        <img className='about-image' src={img} alt='' />
 
         <div className='about-us'>
           <h3>Trabajando por ti</h3>

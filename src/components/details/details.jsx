@@ -4,14 +4,14 @@ import './details.css'
 import truck from '../../icons/truck-moving.png'
 import clock from '../../icons/time-forward.png'
 import cart from '../../icons/shopping-cart.png'
-import Cards from '../cards/cards'
 import { useParams } from 'react-router-dom'
 import useFetch from '../../hooks/useFetch'
+import Slider from '../carousel/carousel'
 
 function Details () {
   const { id } = useParams()
 
-  const url = 'https://sport-elite-back.onrender.com/product/v1'
+  const url = 'https://cougar.onrender.com/product/v1'
   const data = useFetch(url, 'GET')
   let found
   if (data) {
@@ -118,6 +118,7 @@ function Details () {
           </div>
 
           </>}
+      <Slider slice={10} title='Relacionados' />
     </>
 
   )

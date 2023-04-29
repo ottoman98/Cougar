@@ -53,11 +53,10 @@ function NavBarMain () {
             <div id='left-nav'>
 
               <div id='men-hover'>
-                <div onClick={() => hideShowHombre()}>
+                <div onClick={() => hideShowHombre()} className='text-hover'>
 
                   Caballero
 
-                  <img className='down-arrow' src={downArrow} alt='' />
                 </div>
 
                 <div className='dropdown-men' hidden={showHombre}>
@@ -88,7 +87,7 @@ function NavBarMain () {
                         <li><Link to='/hombre/gorros-y-gorras'>Gorros y Gorras</Link></li>
                         <li><Link to='/hombre/balones'>Balones</Link></li>
                         <li><Link to='/hombre/gafas'>Gafas</Link></li>
-                        <li><Link to='/hombre/sombreros'>Cinturones</Link></li>
+                        <li><Link to='/hombre/cinturones'>Cinturones</Link></li>
 
                       </ul>
 
@@ -100,9 +99,9 @@ function NavBarMain () {
               </div>
 
               <div id='woman-hover'>
-                <div onClick={() => { hideShowDama() }}>
+                <div onClick={() => { hideShowDama() }} className='text-hover'>
                   Dama
-                  <img className='down-arrow' src={downArrow} alt='' />
+
                 </div>
 
                 <div className='dropdown-woman' hidden={showDama}>
@@ -118,7 +117,7 @@ function NavBarMain () {
 
                       <ul>
                         <li>
-                          <Link to='/mujer/Zapatos'>Zapatos</Link>
+                          <Link to='/mujer/zapatos'>Zapatos</Link>
                         </li>
                         <li>
                           <Link to='/mujer/tops'>Tops</Link>

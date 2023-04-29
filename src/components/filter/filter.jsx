@@ -33,6 +33,12 @@ function Filter ({ data }) {
   data.map((x) => x.tallas.map((y) => nonRepeatTallas.add(y)))
   data.map((x) => x.colores.map((y) => nonRepeatColores.add(y)))
 
+  const tallasArray = [...nonRepeatTallas]
+
+  const tallasArrayObjects = tallasArray.map((x) => {
+    return x
+  })
+  console.log(tallasArrayObjects)
   return (
     <div className='filter'>
       <h2 onClick={() => hideFilter()}>Filtro</h2>
@@ -45,7 +51,7 @@ function Filter ({ data }) {
           </div>
 
           <ul hidden={tallas}>
-            {[...nonRepeatTallas].map((x) => {
+            {tallasArrayObjects.map((x) => {
               return (
                 <React.Fragment key={x}>
                   <li>
