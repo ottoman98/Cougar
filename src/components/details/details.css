@@ -1,7 +1,7 @@
 @import url("../../variables.css");
 
 #details {
-  margin-top: 20px;
+  padding-top: 5rem;
   gap: 20px;
   display: flex;
   color: var(--font-dark);

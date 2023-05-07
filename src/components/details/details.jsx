@@ -117,8 +117,8 @@ function Details () {
             {found.descripcion}
           </div>
 
-          </>}
-      <Slider slice={10} title='Relacionados' />
+        </>}
+
     </>
 
   )

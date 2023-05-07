@@ -32,12 +32,11 @@ function App () {
                 index element={
                   <>
 
-                    <Main />
-                    <Slider title='Mas Vendidos' slice={0} />
-                    <Guaranty />
+                    <Slider />
                     <HighLighted />
+                    <Guaranty />
                     <PopularBrands />
-                    <Slider slice={40} />
+                    <Cards title='Lo Mas Vendido' />
 
                   </>
                 }

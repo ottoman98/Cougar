@@ -6,9 +6,6 @@
   padding: 0 20px;
   background-color: var(--first);
   color: var(--font-light);
-  position: fixed;
-  z-index: 30;
-  width: 100%;
 }
 
 .handicap {
@@ -39,6 +36,11 @@
 }
 
 @media screen and (min-width: 500px) {
+  #navbar {
+    position: fixed;
+    z-index: 30;
+    width: 100%;
+  }
   #left-nav {
     display: flex;
     align-items: end;
