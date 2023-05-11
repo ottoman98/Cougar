@@ -9,7 +9,4 @@
 - [@ottoman98](https://www.github.com/ottoman98)
 
 
-## Screenshots
-
-![App Screenshot]('./screenshots/Capture1.PNG')
 
