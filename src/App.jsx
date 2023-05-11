@@ -33,10 +33,11 @@ function App () {
                   <>
 
                     <Slider />
+                    <Cards title='Lo Mas Vendido' />
                     <HighLighted />
                     <Guaranty />
+                    <Cards title='Destacado' />
                     <PopularBrands />
-                    <Cards title='Lo Mas Vendido' />
 
                   </>
                 }

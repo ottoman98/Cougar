@@ -65,6 +65,7 @@
   }
   .filter-items {
     position: absolute;
+    z-index: 99999;
     width: 100%;
     padding: 20px;
     left: 0;
