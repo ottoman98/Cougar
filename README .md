@@ -9,11 +9,7 @@
 - [@ottoman98](https://www.github.com/ottoman98)
 
 
-## Deployment
+## Screenshots
 
-To deploy this project run
-
-```bash
-  npm run build
-```
+![App Screenshot]('./screenshots/Capture1.PNG')
 
